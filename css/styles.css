@@ -1,0 +1,416 @@
+/* -основной цвет #E5E5E5 */
+/* -ДОполнительный цвет #2F303A */
+/* -основной цвет текста #212121 */
+/* -второстипенный цвет текта #757575 */
+/* -цвет текста при наведении #2196F3 */
+:root {
+  /* основной цвет текста */
+  --primary-text-color: #212121;
+  /* Дополнительный цвет текста */
+  --titel-text-color: #757575;
+  /* цвет текста при наведении */
+  --second-text-color: #2196f3;
+  /* Основной цвет фона */
+  --primary-bg-color: #e5e5e5;
+  /* цополнительный цвет фона */
+  --second-bg-color: #2f303a;
+
+  --button-text-color: #f5f4fa;
+  /* второй цвет логотипа */
+  --logo-blakc-color: #000000;
+  --logo-white-color: #ffffff;
+  /* цвет текста на кнопке */
+  --nav-color-border: #ececec;
+}
+/* уберание точки в перечислении*/
+.list {
+  list-style: none;
+}
+/* основные  стили к странице */
+
+body {
+  /* background-color: var(--primary-bg-color); */
+  color: var(--primary-text-color);
+
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+ul,
+p,
+h3,
+h2,
+h1 {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+/* логотип */
+.logo {
+  color: var(--second-text-color);
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  text-decoration: none;
+}
+
+.logo .logo-studio-blakc {
+  color: var(--logo-blakc-color);
+}
+.logo .logo-studio-white {
+  color: var(--logo-white-color);
+}
+/* /*  Навигация */
+.site-nav .link {
+  color: var(--primary-text-color);
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link.current,
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--second-text-color);
+}
+/* контакты в шапке сайта */
+.auth-nav .link-contact {
+  color: var(--titel-text-color);
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* цвет ховира на ссылки */
+.auth-nav .link-contact:focus,
+.address-footer .link-contact:hover,
+.auth-nav .link-contact:hover,
+.address-footer .link-contact:focus,
+.address-footer .address:focus,
+.address-footer .address:hover {
+  color: var(--second-text-color);
+}
+/* футер */
+.address-footer {
+  font-style: inherit;
+}
+.footer {
+  background-color: var(--second-bg-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+.address-footer .address {
+  color: #ffffff;
+  text-decoration: none;
+}
+.container .list-button + .list-button {
+  margin-left: 8px;
+}
+/* контакты футора */
+.address-footer .link-contact {
+  color: rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+  line-height: 1.71;
+
+  display: block;
+}
+.address-footer .link-contact + .link-contact {
+  display: block;
+  margin-bottom: 9px;
+}
+/* .address-footer .link-contact:not(:first-child) {
+  display:block;
+ margin-bottom: 9px;
+} */
+.space-address:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer {
+  padding: 60px 0px;
+}
+.footer .list {
+  padding-left: 0;
+}
+.logo.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+  /* margin-left: auto; */
+}
+
+/* Кнопки фильтра */
+.button-primary {
+  border: none;
+  font-family: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+}
+.button-primary {
+  background-color: var(--button-text-color);
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  
+
+  padding: 6px 22px;
+}
+.button-primary:hover,
+button-primary:focus {
+  background-color: var(--second-text-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/* кнопка героя */
+.hero {
+  text-align: center;
+  background-color: #2f303a;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0;
+}
+.hero-title {
+  color: #ffffff;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+.button-hero {
+  background-color: var(--second-text-color);
+  color: #ffffff;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 32px;
+
+   border: none;
+  font-family: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Приемущество */
+.advantage-title {
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+.advantage-text {
+  color: var(--titel-text-color);
+}
+/* род занятий и команда */
+.team-titel,
+.occupation-titel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+.team-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-people {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  margin-bottom: 10px;
+}
+.team-work {
+  color: var(--titel-text-color);
+
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Контент на портфолео */
+
+.contaent-titel {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
+}
+
+.contaent-contents {
+  color: var(--titel-text-color);
+
+  font-size: 16px;
+  line-height: 1.88;
+}
+.contaent-box {
+  display: block;
+
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--nav-color-border) ;
+  border-left: 1px solid var(--nav-color-border);
+  border-right: 1px solid var(--nav-color-border);
+}
+/* оформление с применением flex */
+/* шапка */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.auth-nav.list {
+  display: flex;
+  margin-left: auto;
+}
+.site-nav.list {
+  display: flex;
+  margin-left: 93px;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+.header-border {
+  border-bottom: 1px solid var(--nav-color-border);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* кнопки навигации сделанны больше засчет падингов */
+.site-nav .link,
+.item .link-contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav > .item:not(:last-child) {
+  margin-right: 50px;
+}
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+.display-none-advantage,
+.content-heading {
+  display: none;
+}
+.advantage-list {
+  display: flex;
+}
+.advantage-item {
+  width: calc((100%-30px) / 4);
+}
+.advantage-item + .advantage-item {
+  margin-left: 30px;
+}
+.advantage.section {
+  padding-bottom: 0;
+}
+
+.occupation-list {
+  display: flex;
+  padding-left: 0;
+}
+.occupation-item + .occupation-item {
+  margin-left: 30px;
+}
+.occupation-item > .occupation-no-line {
+  display: block;
+}
+.team,
+.occupation-team {
+  background-color: var(--button-text-color);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.team-list {
+  display: flex;
+  justify-content: center;
+}
+.team-img-foto {
+  display: block;
+}
+.team-card + .team-card {
+  margin-left: 30px;
+}
+.team-card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+/* фильр в портфолео */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter-button {
+  display: flex;
+  padding: 0;
+  margin: 0 0 50px 0;
+  justify-content: center;
+}
+.contaent-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contaent-cards .list {
+  margin-left: 0;
+  display: block;
+  width: calc((100% - 60px) / 3);
+}
+.list.list-cards {
+  /* outline: 2px solid tomato; */
+  /* border-bottom: 1px solid var(--nav-color-border); */
+}
+.list.list-cards:not(:nth-child(3n + 3)) {
+  /* outline: 2px solid teal; */
+  margin-right: 30px;
+}
+.list.list-cards:not(:nth-last-child(-n + 3)) {
+  /* outline: 2px solid gold; */
+  margin-bottom: 30px;
+}
+.contaent-img {
+  display: block;
+}
