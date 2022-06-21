@@ -408,9 +408,6 @@ button-primary:focus {
   border-bottom: 1px solid var(--nav-color-border);
   border-left: 1px solid var(--nav-color-border);
   border-right: 1px solid var(--nav-color-border);
-
-  
-
 }
 /* оформление с применением flex */
 /* шапка */
@@ -546,9 +543,10 @@ button-primary:focus {
   text-decoration: inherit;
   color: inherit;
 }
+
 .contaent-cards-link:hover {
   box-sizing: border-box;
-  
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
