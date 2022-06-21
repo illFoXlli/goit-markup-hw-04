@@ -327,6 +327,9 @@ button-primary:focus {
   margin: 25px 100px;
 }
 /* род занятий и команда */
+.occupation.section {
+  padding-top: 0;
+}
 .team-titel,
 .occupation-titel {
   font-weight: 700;
