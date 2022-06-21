@@ -48,6 +48,7 @@ h1 {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
+/* *input {outline-color: var(--second-text-color);} */
 /* логотип */
 .logo {
   color: var(--second-text-color);
@@ -58,6 +59,9 @@ h1 {
   line-height: 1.19;
 
   text-decoration: none;
+}
+.logo:focus {
+  outline-color: var(--second-text-color);
 }
 
 .logo .logo-studio-blakc {
@@ -80,6 +84,7 @@ h1 {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--second-text-color);
+  outline-color: var(--second-text-color);
 }
 /* контакты в шапке сайта */
 .auth-nav .link-contact {
@@ -113,9 +118,14 @@ h1 {
   display: inline-flex;
   align-items: center;
 }
+.link-contact:focus {
+  outline-color: var(--second-text-color);
+}
+.auth-nav .link-contact:focus .item-envelope-svg,
 .auth-nav .link-contact:hover .item-envelope-svg {
   fill: var(--second-text-color);
 }
+.auth-nav .link-contact:focus .item-contact-svg,
 .auth-nav .link-contact:hover .item-contact-svg {
   fill: var(--second-text-color);
 }
@@ -141,6 +151,9 @@ h1 {
 .address-footer .address {
   color: #ffffff;
   text-decoration: none;
+}
+.address-footer .address:focus {
+  outline-color: var(--second-text-color);
 }
 .container .list-button + .list-button {
   margin-left: 8px;
@@ -205,36 +218,33 @@ h1 {
   display: flex;
   margin-top: 20px;
 }
+
 /* соц сети в футоре */
 .footer-social-link {
-  display: block;
+  display: flex;
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  justify-content: center;
+  align-items: center;
+}
+.footer-social-link:focus {
+  outline-color: var(--second-text-color);
 }
 .footer-social-link + .footer-social-link {
   margin-left: 10px;
 }
 .footer-social {
   fill: #ffffff;
-  margin-left: 12px;
-  margin-top: 12px;
+
 }
 .footer-social-link:hover {
   background: var(--second-text-color);
 }
 
 /* Кнопки фильтра */
-.button-primary {
-  border: none;
-  font-family: inherit;
-  letter-spacing: inherit;
-  cursor: pointer;
-  align-items: center;
-  text-align: center;
-  border-radius: 4px;
-}
 .button-primary {
   background-color: var(--button-text-color);
   color: var(--primary-text-color);
@@ -244,9 +254,19 @@ h1 {
   line-height: 1.62;
 
   padding: 6px 22px;
+
+  border: none;
+  font-family: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
 }
-.button-primary:hover,
-button-primary:focus {
+.button-primary:focus {
+  outline-color: var(--second-text-color);
+}
+.button-primary:hover {
   background-color: var(--second-text-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -302,6 +322,9 @@ button-primary:focus {
 .button-hero:hover {
   background-color: #188ce8;
 }
+.button-hero:focus {
+  outline-color: #188ce8;
+}
 /* Приемущество */
 .advantage-title {
   font-size: inherit;
@@ -315,6 +338,7 @@ button-primary:focus {
   color: var(--titel-text-color);
 }
 .advantage-svg-box {
+  display: flex;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -322,16 +346,18 @@ button-primary:focus {
   border-radius: 4px;
 
   background-color: #f5f4fa;
+
+  justify-content: center;
+  align-items: center;
 }
-.advantage-svg {
-  margin: 25px 100px;
-}
+
 /* род занятий и команда */
 .occupation.section {
   padding-top: 0;
 }
 .team-titel,
-.occupation-titel {
+.occupation-titel,
+.examples-work-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -365,22 +391,29 @@ button-primary:focus {
   padding: 0;
 }
 .card-link-box {
+  display: flex;
   width: 44px;
   height: 44px;
 
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
 }
-.card-link-box:not(:last-child) {
+.card-link-boxes:not(:last-child) {
   margin-right: 10px;
 }
 .card-link-svg {
-  margin: 12px;
+  /* margin: 12px; */
 
   fill: #afb1b8;
 }
 
 .card-link-box:hover {
   background-color: #2196f3;
+}
+.card-link-boxes:focus {
+  outline-color: #2196f3;
 }
 .card-link-box:hover .card-link-svg {
   fill: #ffffff;
@@ -407,9 +440,8 @@ button-primary:focus {
   display: block;
 
   padding: 20px 24px;
-  border-bottom: 1px solid var(--nav-color-border);
-  border-left: 1px solid var(--nav-color-border);
-  border-right: 1px solid var(--nav-color-border);
+  border: 1px solid var(--nav-color-border);
+
 }
 /* оформление с применением flex */
 /* шапка */
@@ -494,6 +526,7 @@ button-primary:focus {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+  background-color: #ffffff;
 }
 /* фильр в портфолео */
 .section {
@@ -520,6 +553,10 @@ button-primary:focus {
 }
 .list.list-cards {
   background-color: #ffffff;
+
+  /* position: relative; */
+
+  overflow: hidden;
 }
 .list.list-cards:not(:nth-child(3n + 3)) {
   /* outline: 2px solid teal; */
@@ -537,11 +574,20 @@ button-primary:focus {
   object-fit: contain;
 
   background: #eeeeee;
+
+  position: relative;
 }
 .contaent-cards-link {
   display: block;
   text-decoration: inherit;
   color: inherit;
+}
+.contaent-cards-link:focus {
+  display: block;
+  text-decoration: inherit;
+  color: inherit;
+
+  outline-color: var(--second-text-color);
 }
 
 .contaent-cards-link:hover {
@@ -549,4 +595,54 @@ button-primary:focus {
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+/*  всплывающии окна */
+/* .contaent-cards-information {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  width: 370px;
+  height: 294px;
+
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+
+  padding: 63px 24px;
+  margin: 0;
+
+  opacity: 0;
+  transition: top 1000ms linear, opacity 1000ms linear;
+} */
+/* постоянные клиенты */
+.examples-boxs {
+  display: flex;
+}
+.examples-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+.examples-box + .examples-box {
+  margin-left: 30px;
+}
+.examples-svg {
+  fill: #afb1b8;
+}
+
+.examples-box:hover {
+  border: 1px solid #2196f3;
+}
+.examples-box:hover .examples-svg {
+  fill: #2196f3;
 }
