@@ -302,7 +302,6 @@ button-primary:focus {
 .button-hero:hover {
   background-color: #188ce8;
 }
-
 /* Приемущество */
 .advantage-title {
   font-size: inherit;
@@ -498,7 +497,6 @@ button-primary:focus {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .filter-button {
   display: flex;
   padding: 0;
@@ -512,7 +510,6 @@ button-primary:focus {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .contaent-cards .list {
   margin-left: 0;
   display: block;
