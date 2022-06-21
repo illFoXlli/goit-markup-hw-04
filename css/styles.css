@@ -91,6 +91,34 @@ h1 {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+/* кнопки навигации сделанны больше засчет падингов */
+.site-nav .link,
+.item .link-contact {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+/* иконки конверта и телефона в шапке ссайта */
+
+.item-envelope {
+  margin-right: 10px;
+
+  fill: var(--titel-text-color);
+}
+.item-contact {
+  margin-right: 10px;
+
+  fill: var(--titel-text-color);
+}
+.link-contact {
+  display: inline-flex;
+  align-items: center;
+}
+.auth-nav .link-contact:hover .item-envelope-svg {
+  fill: var(--second-text-color);
+}
+.auth-nav .link-contact:hover .item-contact-svg {
+  fill: var(--second-text-color);
+}
 
 /* цвет ховира на ссылки */
 .auth-nav .link-contact:focus,
@@ -148,6 +176,54 @@ h1 {
   margin-bottom: 20px;
   /* margin-left: auto; */
 }
+.footer .container {
+  display: flex;
+}
+
+.footer .list {
+  padding-left: 0;
+}
+.logo.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+}
+.footer-social-text {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer-social-box {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.footer-link-box {
+  display: flex;
+  margin-top: 20px;
+}
+/* соц сети в футоре */
+.footer-social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-social-link + .footer-social-link {
+  margin-left: 10px;
+}
+.footer-social {
+  fill: #ffffff;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+.footer-social-link:hover {
+  background: var(--second-text-color);
+}
 
 /* Кнопки фильтра */
 .button-primary {
@@ -166,7 +242,6 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  
 
   padding: 6px 22px;
 }
@@ -180,8 +255,16 @@ button-primary:focus {
 /* кнопка героя */
 .hero {
   text-align: center;
-  background-color: #2f303a;
 
+  background-color: #c4c4c4;
+  background: rgba(47, 48, 58, 0.4);
+  background-image: url(../images/banner_overla_hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  width: 1600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding: 200px 0;
@@ -208,13 +291,16 @@ button-primary:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 32px;
 
-   border: none;
+  border: none;
   font-family: inherit;
   letter-spacing: inherit;
   cursor: pointer;
   align-items: center;
   text-align: center;
   border-radius: 4px;
+}
+.button-hero:hover {
+  background-color: #188ce8;
 }
 
 /* Приемущество */
@@ -228,6 +314,18 @@ button-primary:focus {
 }
 .advantage-text {
   color: var(--titel-text-color);
+}
+.advantage-svg-box {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+
+  background-color: #f5f4fa;
+}
+.advantage-svg {
+  margin: 25px 100px;
 }
 /* род занятий и команда */
 .team-titel,
@@ -255,6 +353,35 @@ button-primary:focus {
 
   font-size: 16px;
   line-height: 1.19;
+
+  margin-bottom: 16px;
+}
+
+.card-link-boxs {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.card-link-box {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+}
+.card-link-box:not(:last-child) {
+  margin-right: 10px;
+}
+.card-link-svg {
+  margin: 12px;
+
+  fill: #afb1b8;
+}
+
+.card-link-box:hover {
+  background-color: #2196f3;
+}
+.card-link-box:hover .card-link-svg {
+  fill: #ffffff;
 }
 
 /* Контент на портфолео */
@@ -278,9 +405,12 @@ button-primary:focus {
   display: block;
 
   padding: 20px 24px;
-  border-bottom: 1px solid var(--nav-color-border) ;
+  border-bottom: 1px solid var(--nav-color-border);
   border-left: 1px solid var(--nav-color-border);
   border-right: 1px solid var(--nav-color-border);
+
+  
+
 }
 /* оформление с применением flex */
 /* шапка */
@@ -307,13 +437,6 @@ button-primary:focus {
   border-bottom: 1px solid var(--nav-color-border);
   margin-left: auto;
   margin-right: auto;
-}
-/* кнопки навигации сделанны больше засчет падингов */
-.site-nav .link,
-.item .link-contact {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .site-nav > .item:not(:last-child) {
@@ -357,7 +480,6 @@ button-primary:focus {
   margin-right: auto;
 }
 
-
 .team-list {
   display: flex;
   justify-content: center;
@@ -400,8 +522,7 @@ button-primary:focus {
   width: calc((100% - 60px) / 3);
 }
 .list.list-cards {
-  /* outline: 2px solid tomato; */
-  /* border-bottom: 1px solid var(--nav-color-border); */
+  background-color: #ffffff;
 }
 .list.list-cards:not(:nth-child(3n + 3)) {
   /* outline: 2px solid teal; */
@@ -411,6 +532,23 @@ button-primary:focus {
   /* outline: 2px solid gold; */
   margin-bottom: 30px;
 }
-.contaent-img {
+.contaent-cards-img {
   display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: contain;
+
+  background: #eeeeee;
+}
+.contaent-cards-link {
+  display: block;
+  text-decoration: inherit;
+  color: inherit;
+}
+.contaent-cards-link:hover {
+  box-sizing: border-box;
+  
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
