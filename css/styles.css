@@ -27,7 +27,9 @@
   list-style: none;
 }
 /* основные  стили к странице */
-
+*input {
+  outline: none
+}
 body {
   /* background-color: var(--primary-bg-color); */
   color: var(--primary-text-color);
@@ -48,7 +50,7 @@ h1 {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
-/* *input {outline-color: var(--second-text-color);} */
+/* outline: {outline-color: none;} */
 /* логотип */
 .logo {
   color: var(--second-text-color);
@@ -60,9 +62,9 @@ h1 {
 
   text-decoration: none;
 }
-/* .logo:focus {
-  outline-color: var(--second-text-color);
-} */
+.logo:focus {
+ outline-color: var(--second-text-color);
+}
 
 .logo .logo-studio-blakc {
   color: var(--logo-blakc-color);
@@ -84,6 +86,7 @@ h1 {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--second-text-color);
+  outline: none;
   /* outline-color: var(--second-text-color); */
 }
 /* контакты в шапке сайта */
@@ -118,9 +121,7 @@ h1 {
   display: inline-flex;
   align-items: center;
 }
-/* .link-contact:focus {
-  outline-color: var(--second-text-color);
-} */
+
 .auth-nav .link-contact:focus .item-envelope-svg,
 .auth-nav .link-contact:hover .item-envelope-svg {
   fill: var(--second-text-color);
@@ -138,6 +139,7 @@ h1 {
 .address-footer .address:focus,
 .address-footer .address:hover {
   color: var(--second-text-color);
+  outline: none;
 }
 /* футер */
 .address-footer {
@@ -243,7 +245,7 @@ h1 {
 }
 .footer-social-link:focus {
   background: var(--second-text-color);
-  outline-color: var(--second-text-color);
+  outline: none;
 }
 
 /* Кнопки фильтра */
@@ -274,14 +276,24 @@ h1 {
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: green;
 }
+.button-primary:focus {
+   outline: nano;
+}
+
 /* кнопка героя */
 .hero {
   text-align: center;
 
   background-color: #c4c4c4;
-  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), 
-rgba(47, 48, 58, 0.4) ), url(../images/banner_overla_hero.jpg);
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/banner_overla_hero.jpg);
+  /*----------------- Почему нельзя зделать так?------------------------------- */
+  /* background-image: url(../images/banner_overla_hero.jpg);
+  background-color: rgba(47, 48, 58, 0.4); */
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -327,7 +339,7 @@ rgba(47, 48, 58, 0.4) ), url(../images/banner_overla_hero.jpg);
 }
 .button-hero:focus {
   background-color: #188ce8;
-  /* outline-color: #188ce8; */
+  outline: none;
 }
 /* Приемущество */
 .advantage-title {
@@ -592,9 +604,12 @@ rgba(47, 48, 58, 0.4) ), url(../images/banner_overla_hero.jpg);
   color: inherit;
 }
 .contaent-cards-link:hover {
-  box-sizing: border-box;
-  /* outline: 4px solid red; */
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.contaent-cards-link:focus{
+  outline:none;
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -642,7 +657,7 @@ rgba(47, 48, 58, 0.4) ), url(../images/banner_overla_hero.jpg);
   margin-left: 30px;
 }
 .examples-link:focus {
-
+  outline: none;
 }
 
 .examples-svg {
